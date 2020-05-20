@@ -14,9 +14,10 @@ use rand::{self, Rng};
 /// Array of
 const BASE62: &[u8] = b"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
-/// Generates a random BASE62 [String] of a given length. For example, if you
-/// provide a length of `5` you will get 5 random BASE62 characters contained in
-/// the resulting [String].
+/// Generates a random BASE62 [String] of a given length.
+///
+/// For example, if you provide a length of `5` you will get 5 random BASE62 characters
+/// contained in the resulting [String].
 ///
 /// This function uses [BASE62](https://www.wikidata.org/wiki/Q809817) (62 unique
 /// characters) as opposed to the more commonly used
@@ -31,7 +32,7 @@ const BASE62: &[u8] = b"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrst
 /// fn main() {
 ///     let my_id = randid_str(5);
 ///
-///     println!("https://example.com/safeid/{}", my_id); // will provide a url-safe id like `bWk9D`, `yWvm3`, `POf3R`
+///     println!("https://example.com/safeid/{}", my_id); // will provide a url-safe id like `bWk9D`, `yWvm3` or `POf3R`
 /// }
 /// ```
 pub fn randid_str(len: i32) -> String {
@@ -46,10 +47,11 @@ pub fn randid_str(len: i32) -> String {
     generated
 }
 
-/// Generates a random padded [i32]-based [String] according to the length,
-/// automatically finding the minimum and maximum integer for that length. For
-/// example, if you input a length of `4` you can get anything between `"0000"`
-/// and `"9999"`.
+/// Generates a random padded [i32]-based [String] according to the length.
+///
+/// This function automatically finds the minimum and maximum integer for the given
+/// length. For example, if you input a length of `4` you can get anything between
+/// `"0000"` and `"9999"`.
 ///
 /// # Examples
 ///
