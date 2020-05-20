@@ -1,9 +1,10 @@
 [package]
 name = "randid"
 description = "Randid (pronounced like random but with `-id` instead of `-om`) is a minimalistic, web-safe library for generating customisable IDs for use in primarily web applications."
-readme = "README.md"
-repository = "https://gitlab.com/owez/randid"
 version = "0.1.0"
+readme = "README.md"
+license = "MIT"
+repository = "https://gitlab.com/owez/randid"
 authors = ["Owez <owez@scalist.net>"]
 edition = "2018"
 
